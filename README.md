@@ -1,4 +1,16 @@
+###### tags: `MySQL`, `Docker`
 # Docker MySQL 架設
+
+作者：Berlin
+
+日期：2022/08/30
+
+Github 頁面：[50ta2012/docker_mysql_demo](https://github.com/50ta2012/docker_mysql_demo)
+
+## 系統需求
+
+* Docker v20.10.17+
+* Docker Compose v2.6.0+
 
 ## 設定 root 和 user 的密碼
 
