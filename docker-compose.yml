@@ -1,0 +1,17 @@
+services:  
+  demo_db:
+    image: mysql:latest
+    container_name: demo_db
+    ports:
+      - 13306:3306
+    secrets:
+      - demo_db_root_password
+    environment:
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/demo_db_root_password
+    volumes:
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    restart: always
+
+secrets:
+  demo_db_root_password:
+    file: ./mysql/demo_db_root_password
